@@ -20,6 +20,6 @@
 	* @type {Object}
 	*/
 	scope.moon.config = enyo.mixin({
-		accelerate: true
+		accelerate: false
 	}, scope.moon.config);
 })(enyo, this);
