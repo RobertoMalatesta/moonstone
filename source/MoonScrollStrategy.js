@@ -1030,12 +1030,14 @@
 		create: enyo.inherit(function (sup) {
 			return function () {
 				sup.apply(this, arguments);
-				this.transform = false;
-				this.accel = false;
+				if (!moon.config.acceleration) {
+					this.transform = false;
+					this.accel = false;
 
-				if(this.overscroll) {
-					//so we can adjust top/left if browser can't handle translations
-					this.$.client.applyStyle('position', 'relative');
+					if(this.overscroll) {
+						//so we can adjust top/left if browser can't handle translations
+						this.$.client.applyStyle('position', 'relative');
+					}
 				}
 			};
 		})
