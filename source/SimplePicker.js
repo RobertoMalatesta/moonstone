@@ -331,7 +331,7 @@
 		* @private
 		*/
 		animateChanged: function() {
-			this.$.client.addRemoveClass('animated', this.animate);
+			this.$.client.addRemoveClass('animated', this.animate && moon.config.accelerate);
 		},
 
 		/**
