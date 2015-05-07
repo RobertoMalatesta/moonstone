@@ -54,6 +54,26 @@
 			}
 		}
 	}
+
+	.moon-image-client {
+		background: rgba(0, 0, 0, 0.5);
+		.moon-icon {
+			margin: 9px;
+		}
+	}
+
+	&.overlay-top .moon-image-client {
+		top: 0;
+		bottom: auto;
+	}
+	 
+	&.overlay-transparent .moon-image-client {
+		background: transparent;
+	}
+
+	&.badge-right .moon-image-client {
+		text-align: right;
+	}
 }
 
 .enyo-locale-non-latin .moon-gridlist-imageitem {
